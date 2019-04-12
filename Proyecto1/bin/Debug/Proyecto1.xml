@@ -1,0 +1,260 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Proyecto1
+</name>
+</assembly>
+<members>
+<member name="T:Proyecto1.My.MyWpfExtension">
+ <summary>
+ Módulo utilizado para definir las propiedades disponibles en el espacio de nombres My de WPF
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Proyecto1.My.MyWpfExtension.Application">
+ <summary>
+ Devuelve el objeto de aplicación de la aplicación en ejecución
+ </summary>
+</member>
+<member name="P:Proyecto1.My.MyWpfExtension.Computer">
+ <summary>
+ Devuelve información sobre el equipo host.
+ </summary>
+</member>
+<member name="P:Proyecto1.My.MyWpfExtension.User">
+ <summary>
+ Devuelve información sobre el usuario actual.  Si desea ejecutar la aplicación con las credenciales 
+ del usuario de Windows actual, llame a My.User.InitializeWithWindowsUser().
+ </summary>
+</member>
+<member name="P:Proyecto1.My.MyWpfExtension.Log">
+ <summary>
+ Devuelve el registro de la aplicación. El archivo de configuración de la aplicación puede configurar los agentes de escucha.
+ </summary>
+</member>
+<member name="P:Proyecto1.My.MyWpfExtension.Windows">
+ <summary>
+ Devuelve la colección de Windows definida en el proyecto.
+ </summary>
+</member>
+<member name="T:Proyecto1.My.Resources.Resources">
+<summary>
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+</summary>
+</member>
+<member name="P:Proyecto1.My.Resources.Resources.ResourceManager">
+<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member>
+<member name="P:Proyecto1.My.Resources.Resources.Culture">
+<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member>
+<member name="T:Proyecto1.ProgressDialog">
+<summary>
+ProgressDialog
+</summary>
+</member>
+<member name="M:Proyecto1.ProgressDialog.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:Proyecto1.StartMenu">
+<summary>
+StartMenu
+</summary>
+</member>
+<member name="M:Proyecto1.StartMenu.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:Proyecto1.Application">
+<summary>
+Application
+</summary>
+</member>
+<member name="M:Proyecto1.Application.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="M:Proyecto1.Application.Main">
+<summary>
+Application Entry Point.
+</summary>
+</member>
+<member name="T:Proyecto1.Archer">
+ <summary>
+     The archer is a unit that attacks from a distance. He does not lock the enemy.
+     He is not able to defend himself at close range, so he is advised to be in the rearguard or protected by structures.
+     He has two types of shot:
+         - A stronger one that will prevent him from moving. This one is effective against armored units (knights).
+         - A weaker one that does not reduce his mobility.
+ </summary>
+</member>
+<member name="M:Proyecto1.Archer.#ctor(System.String,System.Int32,System.Int32)">
+ <summary> Constructor </summary>
+ <param name="colour">Colour</param>
+ <param name="X">Location (column)</param>
+ <param name="Y">Location (row)</param>
+</member>
+<member name="T:Proyecto1.Troop">
+ <summary>
+     Superclass of all game units.
+ </summary>
+</member>
+<member name="M:Proyecto1.Troop.#ctor(System.String,System.String,System.Int32,System.Int32)">
+ <summary> Constructor </summary>
+ <param name="role">Lancer, knight, archer, engineer...</param>
+ <param name="colour">Colour</param>
+ <param name="X">Location (column)</param>
+ <param name="Y">Location (row)</param>
+</member>
+<member name="M:Proyecto1.Troop.FinishTurn">
+ <summary>
+     Procedure executed at the end of the turn. Moves = 0, NO rotation, NO build, NO demolish, NO shoot.
+ </summary>
+</member>
+<member name="M:Proyecto1.Troop.StartTurn">
+ <summary>
+     The unit starts with all the base attributes prepared for the new turn.
+ </summary>
+</member>
+<member name="M:Proyecto1.Troop.Rotate">
+ <summary>
+     Change the positioning and formation of the unit to be able to lock enemies.
+     The rotation is according to the clockwise direction.
+     There are units (archers, engineers...) that do not rotate.
+ </summary>
+</member>
+<member name="M:Proyecto1.Troop.AdjacentEnemies(System.Object)">
+ <summary>
+     Function that controls if the unit has an adjacent enemy.
+     If so, the allied unit is locked in combat and can not move!!
+ </summary>
+ <param name="Character_list">All units in battle.</param>
+</member>
+<member name="M:Proyecto1.Troop.GetStructure(System.Windows.Controls.Grid@)">
+ <summary>
+     Function with which the name of the structure on which the character is obtained.
+ </summary>
+ <param name="Cells">All the cells of the battlefield.</param>
+ <returns>The name of the structure on which the character</returns>
+</member>
+<member name="M:Proyecto1.Engineer.#ctor(System.String,System.Int32,System.Int32)">
+ <summary> Constructor </summary>
+ <param name="colour">Colour</param>
+ <param name="X">Location (column)</param>
+ <param name="Y">Location (row)</param>
+</member>
+<member name="T:Proyecto1.Knight">
+ <summary>
+     Some think it's the best unit in the game... They are not very wrong.
+     Knights are the most mobile unit.
+     They have a special defense against arrows.
+     The weak points are the towers and the fortresses. A knight can not enter them.
+ </summary>
+</member>
+<member name="M:Proyecto1.Knight.#ctor(System.String,System.Int32,System.Int32)">
+ <summary> Constructor </summary>
+ <param name="colour">Colour</param>
+ <param name="X">Location (column)</param>
+ <param name="Y">Location (row)</param>
+</member>
+<member name="T:Proyecto1.Lancer">
+ <summary>
+     The spearman is a... somewhat pathetic troop.
+     Attack at close range. He has a poor movement. It does not stand out in anything!
+     On the other hand, there are many of them.
+     When the adversary begins to build an imposing system of structures (where knights and archers become useless), this infantry can assault him and destroy his defenses.
+     The closed formations of lancers become impenetrable to enemy cavalry, but they are weak to the arrows!
+ </summary>
+</member>
+<member name="M:Proyecto1.Lancer.#ctor(System.String,System.Int32,System.Int32)">
+ <summary> Constructor </summary>
+ <param name="colour">Colour</param>
+ <param name="X">Location (column)</param>
+ <param name="Y">Location (row)</param>
+</member>
+<member name="T:Proyecto1.BattleWindow">
+<summary>
+BattleWindow
+</summary>
+</member>
+<member name="M:Proyecto1.BattleWindow.Character_Selection(System.Windows.Controls.Image,System.Windows.Input.MouseButtonEventArgs)">
+ <summary>
+     Method that is executed when selecting a character.
+ </summary>
+ <param name="sender">Targeted cell</param>
+ <param name="e">Event</param>
+</member>
+<member name="M:Proyecto1.BattleWindow.MoveOrShoot(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+ <summary>
+     Method that is executed when clicking the secondary button of the mouse.
+     It allows the character to move to an adyascent cell or shoot.
+ </summary>
+ <param name="sender">Targeted cell</param>
+ <param name="e">Event</param>
+</member>
+<member name="M:Proyecto1.BattleWindow.Aim(System.Windows.Controls.Image,System.Windows.Input.MouseEventArgs)">
+ <summary>
+     Method that paints a shooting target on the unit to which we want to shoot.
+ </summary>
+ <param name="sender">Cell on which we want to shoot.</param>
+ <param name="e">It is useless, but it is required.</param>
+</member>
+<member name="M:Proyecto1.BattleWindow.BtnEndTurn_Click(System.Object,System.Windows.RoutedEventArgs)">
+ <summary>
+     Method that occurs when the button to end the turn is pressed.
+     Finish your turn!
+ </summary>
+ <param name="sender">The button that is pressed to finish your turn.</param>
+ <param name="e">It is useless, but it is required.</param>
+</member>
+<member name="M:Proyecto1.BattleWindow.BuildOrDemolish(System.Windows.Controls.Button,System.Windows.RoutedEventArgs)">
+ <summary>
+     Method that occurs when a construction button is pressed.
+     This allows to build or destroy structures.
+ </summary>
+ <param name="sender">The button that is pressed to build the structure.</param>
+ <param name="e">It is useless, but it is required.</param>
+</member>
+<member name="M:Proyecto1.BattleWindow.MouseLeaving(System.Windows.Controls.Image,System.Windows.Input.MouseEventArgs)">
+ <summary>
+     Method whose actions occur when the mouse leaves a cell.
+     Paint the cell with the image of the unit that is in it.
+     Clear the images that are created when you point with arrows.
+ </summary>
+ <param name="sender">The cell from which we left.</param>
+ <param name="e">It is useless, but it is required.</param>
+</member>
+<member name="M:Proyecto1.BattleWindow.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="M:Proyecto1.Ctrl_LeaveFromACell.MouseLeaving(System.Windows.Controls.Image,System.Collections.Generic.List{Proyecto1.Troop}@)">
+ <summary>
+     Method whose actions occur when the mouse leaves a cell.
+     Paint the cell with the image of the unit that is in it.
+     Clear the images that are created when you point with arrows.
+ </summary>
+ <param name="sender">The cell from which we left.</param>
+ <param name="Character_list">All units in battle.</param>
+</member>
+<member name="M:Proyecto1.Ctrl_AimForShoot.Aim(System.Windows.Controls.Image,System.Collections.Generic.List{Proyecto1.Troop}@,System.Windows.Controls.Grid@)">
+ <summary>
+     Method that paints a shooting target on the unit to which we want to shoot.
+ </summary>
+ <param name="Targeted_cell">Cell on which we want to shoot.</param>
+ <param name="Character_list">All units in battle.</param>
+ <param name="Cells">All the cells of the battlefield.</param>
+</member>
+</members>
+</doc>

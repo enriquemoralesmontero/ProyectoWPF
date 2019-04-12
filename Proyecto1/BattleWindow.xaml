@@ -1,0 +1,307 @@
+﻿<Window x:Class="BattleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Proyecto1"
+        mc:Ignorable="d"
+        Name="Win"
+        Title="MainWindow" Height="700" Width="800" Loaded="Window_Loaded">
+
+    <!-- Main grid -->
+    <Grid Name="Main">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Cells -->
+        <Grid Name="Cells" Grid.Row="0">
+            <!--
+            <Grid.Background>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Base1.png"/>
+            </Grid.Background>
+            -->
+            <!-- Cells 12x8-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Image Grid.Column="0" Grid.Row="0" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="1" Grid.Row="0" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="2" Grid.Row="0" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="3" Grid.Row="0" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="4" Grid.Row="0" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="5" Grid.Row="0" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="6" Grid.Row="0" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="7" Grid.Row="0" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="8" Grid.Row="0" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="9" Grid.Row="0" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="10" Grid.Row="0" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="11" Grid.Row="0" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="0" Grid.Row="1" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="1" Grid.Row="1" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="2" Grid.Row="1" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="3" Grid.Row="1" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="4" Grid.Row="1" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="5" Grid.Row="1" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="6" Grid.Row="1" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="7" Grid.Row="1" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="8" Grid.Row="1" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="9" Grid.Row="1" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="10" Grid.Row="1" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="11" Grid.Row="1" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="0" Grid.Row="2" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="1" Grid.Row="2" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="2" Grid.Row="2" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="3" Grid.Row="2" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="4" Grid.Row="2" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="5" Grid.Row="2" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="6" Grid.Row="2" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="7" Grid.Row="2" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="8" Grid.Row="2" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="9" Grid.Row="2" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="10" Grid.Row="2" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="11" Grid.Row="2" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="0" Grid.Row="3" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="1" Grid.Row="3" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="2" Grid.Row="3" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="3" Grid.Row="3" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="4" Grid.Row="3" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="5" Grid.Row="3" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="6" Grid.Row="3" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="7" Grid.Row="3" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="8" Grid.Row="3" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="9" Grid.Row="3" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="10" Grid.Row="3" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="11" Grid.Row="3" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="0" Grid.Row="4" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="1" Grid.Row="4" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="2" Grid.Row="4" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="3" Grid.Row="4" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="4" Grid.Row="4" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="5" Grid.Row="4" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="6" Grid.Row="4" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="7" Grid.Row="4" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="8" Grid.Row="4" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="9" Grid.Row="4" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="10" Grid.Row="4" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="11" Grid.Row="4" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="0" Grid.Row="5" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="1" Grid.Row="5" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="2" Grid.Row="5" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="3" Grid.Row="5" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="4" Grid.Row="5" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="5" Grid.Row="5" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="6" Grid.Row="5" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="7" Grid.Row="5" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="8" Grid.Row="5" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="9" Grid.Row="5" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="10" Grid.Row="5" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="11" Grid.Row="5" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="0" Grid.Row="6" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="1" Grid.Row="6" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="2" Grid.Row="6" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="3" Grid.Row="6" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="4" Grid.Row="6" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="5" Grid.Row="6" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="6" Grid.Row="6" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="7" Grid.Row="6" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="8" Grid.Row="6" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="9" Grid.Row="6" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="10" Grid.Row="6" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="11" Grid.Row="6" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="0" Grid.Row="7" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="1" Grid.Row="7" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="2" Grid.Row="7" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="3" Grid.Row="7" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="4" Grid.Row="7" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="5" Grid.Row="7" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="6" Grid.Row="7" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="7" Grid.Row="7" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="8" Grid.Row="7" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="9" Grid.Row="7" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="10" Grid.Row="7" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+            <Image Grid.Column="11" Grid.Row="7" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" IsEnabled="False"/>
+
+            <Image Grid.Column="0" Grid.Row="0" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving" Name="c00"/>
+            <Image Grid.Column="1" Grid.Row="0" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving" Name="c01"/>
+            <Image Grid.Column="2" Grid.Row="0" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving" Name="c02"/>
+            <Image Grid.Column="3" Grid.Row="0" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving" Name="c03"/>
+            <Image Grid.Column="4" Grid.Row="0" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving" />
+            <Image Grid.Column="5" Grid.Row="0" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="6" Grid.Row="0" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="7" Grid.Row="0" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="8" Grid.Row="0" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="9" Grid.Row="0" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="10" Grid.Row="0" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="11" Grid.Row="0" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="0" Grid.Row="1" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="1" Grid.Row="1" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="2" Grid.Row="1" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="3" Grid.Row="1" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="4" Grid.Row="1" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="5" Grid.Row="1" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="6" Grid.Row="1" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="7" Grid.Row="1" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="8" Grid.Row="1" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="9" Grid.Row="1" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="10" Grid.Row="1" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="11" Grid.Row="1" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="0" Grid.Row="2" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="1" Grid.Row="2" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="2" Grid.Row="2" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="3" Grid.Row="2" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="4" Grid.Row="2" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="5" Grid.Row="2" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="6" Grid.Row="2" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="7" Grid.Row="2" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="8" Grid.Row="2" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="9" Grid.Row="2" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="10" Grid.Row="2" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="11" Grid.Row="2" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="0" Grid.Row="3" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="1" Grid.Row="3" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="2" Grid.Row="3" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="3" Grid.Row="3" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="4" Grid.Row="3" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="5" Grid.Row="3" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="6" Grid.Row="3" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="7" Grid.Row="3" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="8" Grid.Row="3" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="9" Grid.Row="3" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="10" Grid.Row="3" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="11" Grid.Row="3" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="0" Grid.Row="4" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="1" Grid.Row="4" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="2" Grid.Row="4" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="3" Grid.Row="4" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="4" Grid.Row="4" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="5" Grid.Row="4" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="6" Grid.Row="4" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="7" Grid.Row="4" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="8" Grid.Row="4" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="9" Grid.Row="4" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="10" Grid.Row="4" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="11" Grid.Row="4" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="0" Grid.Row="5" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="1" Grid.Row="5" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="2" Grid.Row="5" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="3" Grid.Row="5" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="4" Grid.Row="5" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="5" Grid.Row="5" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="6" Grid.Row="5" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="7" Grid.Row="5" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="8" Grid.Row="5" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="9" Grid.Row="5" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="10" Grid.Row="5" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="11" Grid.Row="5" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="0" Grid.Row="6" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="1" Grid.Row="6" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="2" Grid.Row="6" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="3" Grid.Row="6" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="4" Grid.Row="6" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="5" Grid.Row="6" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="6" Grid.Row="6" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="7" Grid.Row="6" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="8" Grid.Row="6" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="9" Grid.Row="6" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="10" Grid.Row="6" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="11" Grid.Row="6" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="0" Grid.Row="7" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="1" Grid.Row="7" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="2" Grid.Row="7" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="3" Grid.Row="7" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="4" Grid.Row="7" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="5" Grid.Row="7" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="6" Grid.Row="7" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="7" Grid.Row="7" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="8" Grid.Row="7" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="9" Grid.Row="7" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="10" Grid.Row="7" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+            <Image Grid.Column="11" Grid.Row="7" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Void.png" MouseLeftButtonUp="Character_Selection" MouseRightButtonUp="MoveOrShoot" MouseEnter="Aim" MouseLeave="MouseLeaving"/>
+        </Grid>
+
+        <!-- Panel (below) -->
+        <Grid Name="Panel" Grid.Row="1">
+            <!--
+            <Grid.Background>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Base1.png"/>
+            </Grid.Background>
+            -->
+            <!-- Cells 4x1-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Image Name="imgUnitFace" Grid.Column="0" Grid.Row="0" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Base5.png"/>
+            <Button Grid.Column="1" Grid.Row="0">
+                <StackPanel>
+                    <TextBlock Name="lblUnitName" Text=""/>
+                    <TextBlock Name="lblUnitRole" Text="Tipo" FontStyle="Italic"/>
+                    <TextBlock Name="lblUnitDescription" Text="Descripción" FontStyle="Italic"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="2" Grid.Row="0">
+                <StackPanel>
+                    <TextBlock Name="lblUnitMoves" Text="Moves: "/>
+                    <TextBlock Name="lblUnitTerrain" Text="Descubierto"/>
+                </StackPanel>
+            </Button>
+            <Button Name="btnStructure1" Grid.Column="3" Grid.Row="0" Click="BuildOrDemolish">
+                <Button.Background>
+                    <ImageBrush x:Name="imgStructure1" ImageSource="pack://siteoforigin:,,,/Resources/Void.png"/>
+                </Button.Background>
+            </Button>
+            <Button Name="btnStructure2" Grid.Column="4" Grid.Row="0" Click="BuildOrDemolish">
+                <Button.Background>
+                    <ImageBrush x:Name="imgStructure2" ImageSource="pack://siteoforigin:,,,/Resources/Void.png"/>
+                </Button.Background>
+            </Button>
+            <Button Name="btnStart" Grid.Column="5" Grid.Row="0">
+                <Button.Background>
+                    <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Void.png"/>
+                </Button.Background>
+            </Button>
+            <Button Name="btnEndTurn" Grid.Column="6" Grid.Row="0">
+                <Button.Background>
+                    <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Void.png"/>
+                </Button.Background>
+                <StackPanel>
+                    <TextBlock Name="lblEnd" Text="END TURN" FontWeight="Bold" FontSize="15"/>
+                </StackPanel>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>
