@@ -36,7 +36,7 @@ Module Ctrl_BuildOrDemolish
             Exit Sub ' If no values are collected, the method is not executed.
         End Try
 
-        ThisCharacter.Moves = 0
+        ThisCharacter.SetMoves(0)
         ThisCharacter.CanBuild = False
         ThisCharacter.CanDemolish = False
 
@@ -62,7 +62,7 @@ Module Ctrl_BuildOrDemolish
             Exit Sub ' If no values are collected, the method is not executed.
         End Try
 
-        ThisCharacter.Moves = 0
+        ThisCharacter.SetMoves(0)
         ThisCharacter.CanDemolish = False
 
         CType(currentCell, Image).Source = Sprites.VOID_png

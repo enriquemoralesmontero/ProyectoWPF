@@ -19,7 +19,7 @@
         MyBase.New("Lancer", colour, X, Y)
 
         BaseMoves = 1
-        Moves = 1
+        SetMoves(1)
         IsArmored = False
         CanDemolish = True ' He can destroy structures!!!
         CanBuild = False

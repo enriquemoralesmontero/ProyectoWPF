@@ -70,6 +70,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Misc\SavedGame.vb" />
     <Compile Include="ProgressDialog.xaml.vb">
       <DependentUpon>ProgressDialog.xaml</DependentUpon>
     </Compile>

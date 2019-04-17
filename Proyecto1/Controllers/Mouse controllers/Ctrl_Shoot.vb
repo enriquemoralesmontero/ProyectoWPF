@@ -23,7 +23,7 @@
         End Try
 
         MyArcher.CanShoot = False
-        MyArcher.Moves = 0
+        MyArcher.SetMoves(0)
         Character_list.Remove(Targeted_character)
         CType(sender, Image).Source = Sprites.KO_jpg
 

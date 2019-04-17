@@ -99,7 +99,7 @@
         ' - Control 6:
         ' If the enemy has any protection against the arrows, we are forced to shoot him without having moved before.
 
-        If TargetedCharacter.IsArmored And CurrentCharacter.Moves <> CurrentCharacter.BaseMoves Then
+        If TargetedCharacter.IsArmored And CurrentCharacter.GetMoves() <> CurrentCharacter.BaseMoves Then
             Targeted_cell.Source = Sprites.PARAPET_png
             Exit Sub
         End If

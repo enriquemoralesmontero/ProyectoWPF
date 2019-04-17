@@ -18,7 +18,7 @@
         MyBase.New("Knight", colour, X, Y)
 
         BaseMoves = 3 ' A knight can move many cells!
-        Moves = 3
+        SetMoves(3)
         IsArmored = True
         CanDemolish = False
         CanBuild = False

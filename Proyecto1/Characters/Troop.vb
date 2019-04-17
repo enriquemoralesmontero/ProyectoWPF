@@ -10,7 +10,8 @@
     Public Property X As Integer            ' Coordinate - Column
     Public Property Y As Integer            ' Coordinate - Row
     Public Property BaseMoves As Integer
-    Public Property Moves As Integer
+    Private Property Moves As List(Of Boolean)
+    'Private Property Moves As Integer
 
     Public Property IsSelected As Boolean
     Public Property IsLocked As Boolean     ' The character can not move.
@@ -58,6 +59,24 @@
     End Sub
 
     ' #################################################################################################
+    ' SETTERS AND GETTERS
+    ' #################################################################################################
+
+    Public Function GetMoves() As Integer
+        Return Me.Moves.Count
+    End Function
+
+    Public Sub SetMoves(ByVal Moves As Integer)
+
+        Me.Moves = New List(Of Boolean)
+
+        For i As Integer = 1 To Moves
+            Me.Moves.Add(True)
+        Next
+
+    End Sub
+
+    ' #################################################################################################
     ' METHODS
     ' #################################################################################################
 
@@ -66,7 +85,7 @@
     ''' </summary>
     Public Sub FinishTurn()
 
-        Me.Moves = 0
+        Me.SetMoves(0)
 
         Me.CanRotate = False
         Me.CanBuild = False
@@ -90,7 +109,7 @@
         End If
 
         Me.CanRotate = True
-        Me.Moves = Me.BaseMoves
+        Me.SetMoves(Me.BaseMoves)
 
     End Sub
 

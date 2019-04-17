@@ -65,7 +65,7 @@
         lblUnitName.Text = ThisCharacter.Captain
         lblUnitRole.Text = "Tipo: " + ThisCharacter.Role
         lblUnitDescription.Text = ThisCharacter.Role
-        lblUnitMoves.Text = "Movimientos: " + ThisCharacter.Moves.ToString
+        lblUnitMoves.Text = "Movimientos: " + ThisCharacter.GetMoves().ToString
 
         Dim Struct = ThisCharacter.GetStructure(Cells)
 

@@ -18,7 +18,7 @@
             .ImageSource = getBackground(dice)
         }
 
-        Cells.Background = MyBackgroundImage
+        Main.Background = MyBackgroundImage
 
 #End Region
 
@@ -210,8 +210,9 @@
             Next
         End If
 
-        imgStructure1.ImageSource = New BitmapImage(New Uri(Sprites.VOID))
-        imgStructure2.ImageSource = New BitmapImage(New Uri(Sprites.VOID))
+        imgStructure1.ImageSource = Sprites.VOID_png
+        imgStructure2.ImageSource = Sprites.VOID_png
+        Flag.ImageSource = New BitmapImage(New Uri("pack://siteoforigin:,,,/Resources/" + Current_Turn + "Flag.png"))
 
     End Sub
 
@@ -249,9 +250,20 @@
 
     Private Sub BtnStart_Click(sender As Object, e As RoutedEventArgs) Handles btnStart.Click
 
+        'Dim NewStartMenu As StartMenu = New StartMenu With {
+        '    .Character_list = Me.Character_list,
+        '    .Current_Turn = Me.Current_Turn,
+        '    .Cells = Me.Cells
+        '}
+
         Dim NewStartMenu As StartMenu = New StartMenu
-        NewStartMenu.SetCharacter_list(Character_list)
+
+        NewStartMenu.SetFields(Character_list, Current_Turn, Cells)
         NewStartMenu.ShowDialog()
+
+        Character_list = NewStartMenu.Character_list
+        Current_Turn = NewStartMenu.Current_Turn
+        Cells = NewStartMenu.Cells
 
         'Dim dia As Dialogo = New Dialogo
         'dia.ShowDialog()

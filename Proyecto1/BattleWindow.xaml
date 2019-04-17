@@ -20,6 +20,9 @@
 
         <!-- Cells -->
         <Grid Name="Cells" Grid.Row="0">
+            <Grid.Effect>
+                <DropShadowEffect ShadowDepth="10" Direction="45" Opacity="0.9"/>
+            </Grid.Effect>
             <!--
             <Grid.Background>
                 <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Base1.png"/>
@@ -247,11 +250,9 @@
 
         <!-- Panel (below) -->
         <Grid Name="Panel" Grid.Row="1">
-            <!--
             <Grid.Background>
-                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Base1.png"/>
+                <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/InfoPanel.png"/>
             </Grid.Background>
-            -->
             <!-- Cells 4x1-->
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -265,18 +266,24 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Image Name="imgUnitFace" Grid.Column="0" Grid.Row="0" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/Base5.png"/>
+            <Image Name="imgUnitFace" Grid.Column="0" Grid.Row="0" Stretch="Fill"/>
             <Button Grid.Column="1" Grid.Row="0">
+                <Button.Background>
+                    <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Void.png"/>
+                </Button.Background>
                 <StackPanel>
-                    <TextBlock Name="lblUnitName" Text=""/>
-                    <TextBlock Name="lblUnitRole" Text="Tipo" FontStyle="Italic"/>
-                    <TextBlock Name="lblUnitDescription" Text="Descripción" FontStyle="Italic"/>
+                    <TextBlock Name="lblUnitName" Text="" Foreground="White" FontFamily="Calibri" FontWeight="Bold"/>
+                    <TextBlock Name="lblUnitRole" Text="Tipo" FontStyle="Italic" Foreground="White" FontFamily="Calibri" FontWeight="Bold"/>
+                    <TextBlock Name="lblUnitDescription" Text="Descripción" FontStyle="Italic" Foreground="White" FontFamily="Calibri" FontWeight="Bold"/>
                 </StackPanel>
             </Button>
             <Button Grid.Column="2" Grid.Row="0">
+                <Button.Background>
+                    <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Void.png"/>
+                </Button.Background>
                 <StackPanel>
-                    <TextBlock Name="lblUnitMoves" Text="Moves: "/>
-                    <TextBlock Name="lblUnitTerrain" Text="Descubierto"/>
+                    <TextBlock Name="lblUnitMoves" Text="Moves: " Foreground="White" FontFamily="Calibri" FontWeight="Bold"/>
+                    <TextBlock Name="lblUnitTerrain" Text="Descubierto" Foreground="White" FontFamily="Calibri" FontWeight="Bold"/>
                 </StackPanel>
             </Button>
             <Button Name="btnStructure1" Grid.Column="3" Grid.Row="0" Click="BuildOrDemolish">
@@ -291,12 +298,12 @@
             </Button>
             <Button Name="btnStart" Grid.Column="5" Grid.Row="0">
                 <Button.Background>
-                    <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Void.png"/>
+                    <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Start.png"/>
                 </Button.Background>
             </Button>
             <Button Name="btnEndTurn" Grid.Column="6" Grid.Row="0">
                 <Button.Background>
-                    <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/Void.png"/>
+                    <ImageBrush x:Name="Flag" ImageSource="pack://siteoforigin:,,,/Resources/BlueFlag.png"/>
                 </Button.Background>
                 <StackPanel>
                     <TextBlock Name="lblEnd" Text="END TURN" FontWeight="Bold" FontSize="15"/>

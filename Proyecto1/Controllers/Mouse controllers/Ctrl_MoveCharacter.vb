@@ -95,7 +95,7 @@
             '   - has moves (> 0)...,
             ' the character moves!
 
-            If Not This_Character.IsLocked And This_Character.Moves > 0 Then
+            If Not This_Character.IsLocked And This_Character.GetMoves() > 0 Then
 
                 If IsNothing(Attacked_character) Then
 
@@ -103,26 +103,26 @@
 
                 If This_Character.X = Grid.GetColumn(Invaded_cell) And This_Character.Y = Grid.GetRow(Invaded_cell) - 1 Then
                     This_Character.Y += 1 ' Move down.
-                    This_Character.Moves -= 1 ' Moves are reduced.
-                    lblUnitMoves.Text = "Movimientos: " + This_Character.Moves.ToString
+                    This_Character.SetMoves(This_Character.GetMoves() - 1) ' Moves are reduced.
+                    lblUnitMoves.Text = "Movimientos: " + This_Character.GetMoves().ToString
                     Old_Cell.Source = New BitmapImage(New Uri("pack://siteoforigin:,,,/Resources/Void.png"))
                     Invaded_cell.Source = New BitmapImage(New Uri("pack://siteoforigin:,,,/Resources/" + This_Character.Graphic + "Selec.png"))
                 ElseIf This_Character.X = Grid.GetColumn(Invaded_cell) And This_Character.Y = Grid.GetRow(Invaded_cell) + 1 Then
                     This_Character.Y -= 1 ' Move up.
-                    This_Character.Moves -= 1 ' Moves are reduced.
-                    lblUnitMoves.Text = "Movimientos: " + This_Character.Moves.ToString
+                    This_Character.SetMoves(This_Character.GetMoves() - 1) ' Moves are reduced.
+                    lblUnitMoves.Text = "Movimientos: " + This_Character.GetMoves().ToString
                     Old_Cell.Source = New BitmapImage(New Uri("pack://siteoforigin:,,,/Resources/Void.png"))
                     Invaded_cell.Source = New BitmapImage(New Uri("pack://siteoforigin:,,,/Resources/" + This_Character.Graphic + "Selec.png"))
                 ElseIf This_Character.X + 1 = Grid.GetColumn(Invaded_cell) And This_Character.Y = Grid.GetRow(Invaded_cell) Then
                     This_Character.X += 1 ' Move right.
-                    This_Character.Moves -= 1 ' Moves are reduced.
-                    lblUnitMoves.Text = "Movimientos: " + This_Character.Moves.ToString
+                    This_Character.SetMoves(This_Character.GetMoves() - 1) ' Moves are reduced.
+                    lblUnitMoves.Text = "Movimientos: " + This_Character.GetMoves().ToString
                     Old_Cell.Source = New BitmapImage(New Uri("pack://siteoforigin:,,,/Resources/Void.png"))
                     Invaded_cell.Source = New BitmapImage(New Uri("pack://siteoforigin:,,,/Resources/" + This_Character.Graphic + "Selec.png"))
                 ElseIf This_Character.X - 1 = Grid.GetColumn(Invaded_cell) And This_Character.Y = Grid.GetRow(Invaded_cell) Then
                     This_Character.X -= 1 ' Move left.
-                    This_Character.Moves -= 1 ' Moves are reduced.
-                    lblUnitMoves.Text = "Movimientos: " + This_Character.Moves.ToString
+                    This_Character.SetMoves(This_Character.GetMoves() - 1) ' Moves are reduced.
+                    lblUnitMoves.Text = "Movimientos: " + This_Character.GetMoves().ToString
                     Old_Cell.Source = New BitmapImage(New Uri("pack://siteoforigin:,,,/Resources/Void.png"))
                     Invaded_cell.Source = New BitmapImage(New Uri("pack://siteoforigin:,,,/Resources/" + This_Character.Graphic + "Selec.png"))
                 End If

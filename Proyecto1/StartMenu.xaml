@@ -13,7 +13,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Button Name="BtnSave" Grid.Row="0" Content="Save" FontSize="12" SizeChanged="Control_SizeChanged" Click="Save"/>
-        <Button Name="BtnOpen" Grid.Row="1" Content="Open" FontSize="12" SizeChanged="Control_SizeChanged"/>
+        <Button Name="BtnOpen" Grid.Row="1" Content="Open" FontSize="12" SizeChanged="Control_SizeChanged" Click="Open"/>
         <Button Name="BtnExit" Grid.Row="2" Content="Exit" FontSize="12" SizeChanged="Control_SizeChanged"/>
     </Grid>
 </Window>

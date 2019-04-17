@@ -12,7 +12,7 @@
         MyBase.New("Engineer", colour, X, Y)
 
         BaseMoves = 2 ' A engineer can move two cells!
-        Moves = 2
+        SetMoves(2)
         IsArmored = False
         CanDemolish = True
         CanBuild = True
